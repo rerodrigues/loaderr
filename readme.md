@@ -1,4 +1,4 @@
-# Loaderr Demo Page
+# Loaderr
 
 ## What is Loaderr?
 Loaderr is small piece of script, aimed to help in the task of loading and injection of external snippets (or components) and the needed dependencies in a static page with only one simple script call.
@@ -49,7 +49,7 @@ A module is a simple javascript file that tells Loaderr what files to load, in w
     });
 ```
 
-Check the source code for more examples.
+Check the [demo page](http://www.renatorodrigues.ninja/loaderr) for more examples.
 
 ## License:
 Use it as you wish. I would greatly appreciate if you keep the credits though.
