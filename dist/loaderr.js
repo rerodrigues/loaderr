@@ -46,7 +46,7 @@ var loaderr = (function(options) {
                         addScript(scripts.slice(1), callback);
                     }
                 } else {
-                    if(inst.options.debug) { console.log('[callback loadScript]'); }
+                    if(inst.options.debug) { console.log('[callback loadScripts]'); }
                     callback();
                 }
             };
@@ -83,7 +83,7 @@ var loaderr = (function(options) {
                         document.getElementsByTagName('head')[0].appendChild(styleElement);
                     }
                 } else {
-                    if(inst.options.debug) { console.log('[callback loadStyle]'); }
+                    if(inst.options.debug) { console.log('[callback loadStyles]'); }
                     callback();
                 }
             };

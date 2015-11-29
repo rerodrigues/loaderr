@@ -53,11 +53,11 @@
                 [ "/static/js/my_snipet/mobile_specific.js", window.isMobile ], /* loads only if mobile */
             ];
     
-        loaderr.loadStyle(styles, function() {
-            /* loadStyle callback */
+        loaderr.loadStyles(styles, function() {
+            /* loadStyles callback */
             
-            loaderr.loadScript(scripts, function(){
-                /* loadScript callback */
+            loaderr.loadScripts(scripts, function(){
+                /* loadScripts callback */
                 
                 mySnippet.init(); /* at this point all dependecies are already loaded and you can safely start your application */
             });

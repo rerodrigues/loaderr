@@ -37,11 +37,11 @@ A module is a simple javascript file that tells Loaderr what files to load, in w
         [ "/static/js/my_snipet/mobile_specific.js", window.isMobile ], /* loads only if mobile */
     ];
     
-    loaderr.loadStyle(styles, function() {
-        /* loadStyle callback */
+    loaderr.loadStyles(styles, function() {
+        /* loadStyles callback */
     
-        loaderr.loadScript(scripts, function(){
-            /* loadScript callback */
+        loaderr.loadScripts(scripts, function(){
+            /* loadScripts callback */
             
             /* at this point all dependecies are already loaded and you can safely start your application */
             mySnippet.init(); 
@@ -49,7 +49,8 @@ A module is a simple javascript file that tells Loaderr what files to load, in w
     });
 ```
 
-Check the [demo page](http://www.renatorodrigues.ninja/loaderr) for more examples.
+## Demo:
+To see Loaderr in action check the [demo page](http://www.renatorodrigues.ninja/loaderr).
 
 ## License:
 Use it as you wish. I would greatly appreciate if you keep the credits though.
