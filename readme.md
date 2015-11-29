@@ -1,7 +1,6 @@
 # Loaderr Demo Page
 
 ## What is Loaderr?
-
 Loaderr is small piece of script, aimed to help in the task of loading and injection of external snippets (or components) and the needed dependencies in a static page with only one simple script call.
 
 It can load **JS scripts** and **CSS styles** with ease.
@@ -16,44 +15,43 @@ Loaderr receives an array of JS/CSS and loads them synchronously. The JS loader 
 
 ## How to use:
 
-To use Loaderr, just include the _loaderr.js_ script and then add a _<script type="text/javascript" src="yourmodule.js" />_ in your page.
+To use Loaderr, just include the _loaderr.js_ script and then add a _&lt;script type="text/javascript" src="yourmodule.js" /&gt;_ in your page.
 
 ### The modules format:
 
 A module is a simple javascript file that tells Loaderr what files to load, in which order and under which condition.
 
 ### Example:
-
 ```
     var styles = [
-            "/static/css/my_snipet/main.css" ,
-            "/static/css/dist/some_lib/some_lib_style.css"
-        ],
+        "/static/css/my_snipet/main.css" ,
+        "/static/css/dist/some_lib/some_lib_style.css"
+    ],
     
-        scripts = [
-            ["/static/js/dist/jquery-1.10.2.min.js", !window.jQuery ],
-            ["/static/js/dist/underscore-1.5.1.min.js", !window._ ],
-             "/static/js/dist/some_mobile_detection_lib_or_routine.js", /* no condition, it is always loaded */
-            ["/static/js/my_libs/my_utils.js", !window.myUtils ],
-             "/static/js/my_snipet/main.js", /* no condition, it is always loaded */
-            [ "/static/js/my_snipet/mobile_specific.js", window.isMobile ], /* loads only if mobile */
-        ];
+    scripts = [
+        ["/static/js/dist/jquery-1.10.2.min.js", !window.jQuery ],
+        ["/static/js/dist/underscore-1.5.1.min.js", !window._ ],
+         "/static/js/dist/some_mobile_detection_lib_or_routine.js", /* no condition, it is always loaded */
+        ["/static/js/my_libs/my_utils.js", !window.myUtils ],
+         "/static/js/my_snipet/main.js", /* no condition, it is always loaded */
+        [ "/static/js/my_snipet/mobile_specific.js", window.isMobile ], /* loads only if mobile */
+    ];
     
     loaderr.loadStyle(styles, function() {
         /* loadStyle callback */
     
         loaderr.loadScript(scripts, function(){
             /* loadScript callback */
-    
-            mySnippet.init(); 
+            
             /* at this point all dependecies are already loaded and you can safely start your application */
+            mySnippet.init(); 
         });
     });
 ```
+
 Check the source code for more examples.
 
 ## License:
-
 Use it as you wish. I would greatly appreciate if you keep the credits though.
 
-Loaderr is made by [Renato Rodrigues](http://about.me/renato.rodrigues) and shared with you for free. Enjoy it!
+_Loaderr is made by [Renato Rodrigues](http://about.me/renato.rodrigues) and shared with you for free. Enjoy it!_
